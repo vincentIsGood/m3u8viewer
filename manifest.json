@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"name": "m3u8 player",
+	"description": "A chromium extension created by vincentko. Local files cannot be read.",
+	"version": "1.0",
+	
+	"action": {
+		"default_title": "m3u8 player",
+		"default_icon": "icon.png",
+		"default_popup": "main.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": [
+		"tabs",
+		"downloads",
+		"scripting"
+	],
+	"host_permissions": [
+		"*://*/*.m3u8",
+		"file://*/*.m3u8",
+		"file://*/*.ts"
+	]
+}
