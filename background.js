@@ -7,6 +7,8 @@
  * https://developer.chrome.com/docs/extensions/reference/tabs/
  * https://developer.chrome.com/docs/extensions/reference/downloads/
  * https://developer.chrome.com/docs/extensions/reference/scripting/
+ * 
+ * @author Vincent Ko
  */
 
 /**

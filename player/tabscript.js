@@ -1,3 +1,11 @@
+/**
+ * The main function of this script is to get url
+ * from param then stream the m3u8 file using
+ * videojs.
+ */
+/**
+ * @param {string} key
+ */
 function getParam(key){
     let searchParam = window.location.search;
     if(!searchParam.startsWith("?")){
