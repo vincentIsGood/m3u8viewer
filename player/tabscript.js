@@ -32,5 +32,5 @@ function isLocalFile(url){
 window.onload = ()=>{
     let video = videojs("video");
     // video.src({type: "application/vnd.apple.mpegurl", src: getParam("origin")});
-    video.src({type: "application/x-mpegURL", src: getParam("origin")});
+    video.src({type: "application/x-mpegURL", src: decodeURIComponent(getParam("origin"))});
 }

@@ -28,7 +28,8 @@ function isRemoteFile(url){
 
 function isStreamFile(url){
     if(!url) return false;
-    return url.endsWith(".m3u8") || url.endsWith(".m3u");
+    let parsedUrl = new URL(url);
+    return parsedUrl.pathname.endsWith(".m3u8") || parsedUrl.pathname.endsWith(".m3u");
 }
 
 function closeCurrentTab(){
@@ -41,7 +42,7 @@ function closeCurrentTab(){
 async function createPlayerTab(){
     if(canCreatePlayer()){
         chrome.tabs.create({
-            url: "player/index.html?origin=" + originalUrl,
+            url: "player/index.html?origin=" + encodeURIComponent(originalUrl),
             active: true,
         });
     }
